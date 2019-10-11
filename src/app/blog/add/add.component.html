@@ -1,0 +1,46 @@
+<div style="width: 600px">
+  <form #blogForm="ngForm" (ngSubmit)="addBlog(blogForm)">
+    <div class="form-group" hidden>
+      <label>Id</label>
+      <input type="number" name="id" class="form-control" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Content</label>
+      <input type="text" name="content" class="form-control" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Category </label>
+      <select name="category" ngModel>
+        <option *ngFor="let category of categorys" [value]="category.id">{{category.categoryName}} </option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<!--<div style="width: 600px">-->
+<!--  <form [formGroup]="form" (ngSubmit)="addBlog()">-->
+<!--    <div class="form-group" hidden>-->
+<!--      <label>Id</label>-->
+<!--      <input type="number"  class="form-control" formControlName="id">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label>Name</label>-->
+<!--      <input type="text"  class="form-control" formControlName="name">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label>Content</label>-->
+<!--      <input type="text"  class="form-control" formControlName="content">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label>Category </label>-->
+<!--      <select formGroupName="category">-->
+<!--        <option *ngFor="let category of categorys" >{{category.categoryName}} </option>-->
+<!--      </select>-->
+<!--    </div>-->
+<!--    <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--  </form>-->
+<!--</div>-->
